@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<standards>
+<interestRate>8.0</interestRate>
+<salesTax>0.09</salesTax>
+</standards>
+<computer>
+<ID>1</ID>
+<brand>Atari</brand>
+<cost>549.95</cost>
+<model>Atari 400</model>
+<pic>Atari400.jpg</pic>
+<term>6</term>
+<notes>It plays Pac-Man!</notes>
+</computer>
+<computer>
+<ID>2</ID>
+<brand>Atari</brand>
+<cost>999.95</cost>
+<model>Atari 800</model>
+<pic>Atari800.jpg</pic>
+<term>12</term>
+<notes>It does everything a computer should do!</notes>
+</computer>
+<computer>
+<ID>3</ID>
+<brand>Commodore</brand>
+<cost>595.00</cost>
+<model>PET</model>
+<pic>commodorePET.jpg</pic>
+<term>6</term>
+<notes>Store your programs on cassette tapes!</notes>
+</computer>
+<computer>
+<ID>4</ID>
+<brand>KayPro</brand>
+<cost>2795.00</cost>
+<model>KayPro 10</model>
+<pic>KayPro10.jpg</pic>
+<term>18</term>
+<notes>The fabulous KayPro is almost easy to carry!</notes>
+</computer>
+<computer>
+<ID>5</ID>
+<brand>KayPro</brand>
+<cost>4095.00</cost>
+<model>KayPro 20</model>
+<pic>KayPro10.jpg</pic>
+<term>18</term>
+<notes>The fabulous KayPro 20 is not easy to carry!</notes>
+</computer>
+</dataroot>

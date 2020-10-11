@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Basic Site Starter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<style type="text/css">
+#buttons {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.specialText {
+    color: rgba(255,1,5,1.00);
+    font-style: italic;
+}
+#rightPanelOverlay, #rightPanelPush {
+    width: 500px;
+}
+</style>
+</head>
+
+<body>
+ <!-- Start of Main Page-->
+<div data-role="page" id="page">
+	
+<!--Start of Header-->
+  <div data-role="header" id="theHeader">
+    <h1>Panel Examples</h1> 
+	<!-- Buttons in the Header-->
+    <a class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-info" href="#leftPanelOverlay">Left Overlay</a> 
+	<a class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-star" href="#rightPanelOverlay">Right Overlay</a> 
+</div>
+<!--End of Header-->
+	
+<!--Start of Main Content-->
+ <div class="ui-content" role="main" id="#theContent"> Panels can be opened in a variety of ways.  The buttons below and those in the header will open different panels. <br>
+	<!--Div around Button Sets-->
+    <div id="buttons"> 
+	<!--Overlay Buttons-->
+	<a class = "ui-btn ui-btn-inline" href="#leftPanelOverlay" >Left Overlay</a> 
+	<a class = "ui-btn ui-btn-inline" href="#rightPanelOverlay" >Right Overlay</a>
+	<!--Reveal Buttons-->
+	<a class = "ui-btn ui-btn-inline" href="#leftPanelReveal" >Left Reveal</a> <a class = "ui-btn ui-btn-inline" href="#rightPanelReveal" >Right Reveal</a> 
+	<!--Push Buttons-->	
+	<a class = "ui-btn ui-btn-inline" href="#leftPanelPush" >Left Push</a> 
+	<a class = "ui-btn ui-btn-inline" href="#rightPanelPush" >Right Push</a> 
+	</div>
+	<!--End of Div around Button Sets--> 	  
+</div>
+<!--End of Main Content-->	
+	<!--Start of Footer-->
+  <div data-role="footer" data-position="fixed">
+    <h4>Panel Examples</h4>	
+  </div>
+	<!--End of Footer-->
+	
+<!--Start of Panels-->
+	<!--Left Panel Overlay-->
+  <div id="leftPanelOverlay" data-role="panel"  data-display="overlay" data-position-fixed="true">
+    <div>This is an example of an <span class="specialText">data-display="overlay"</span> panel. </div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	<!--End of Left Panel Overlay-->
+	
+	<!--Right Panel Overlay-->
+  <div id="rightPanelOverlay" data-role="panel" data-position="right" data-display="overlay" data-position-fixed="true">
+    <div>
+      <p>The code for this <span class="specialText">overlay</span> panel contains <span class="specialText">data-position="right"</span> so the panel displays on the right hand side of the page.</p><p>Normally panels have a width of 272 pixels.  This one has the width set to 500px in the page's CSS.</p>
+    </div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	<!--End of Right Panel Overlay-->
+	
+	<!--Left Panel Reveal-->
+  <div id="leftPanelReveal" data-role="panel"  data-display="reveal" data-position-fixed="true">
+    <div>This is an example of a <span class="specialText">data-display="reveal"</span> panel.</div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	<!--End of Left Panel Reveal-->
+	
+	<!--Right Panel Reveal-->
+  <div id="rightPanelReveal" data-role="panel" data-position="right" data-display="reveal" data-position-fixed="true">
+    <div>
+      <p>The code for this reveal panel contains <span class="specialText">data-position="right"</span> so the panel displays on the right hand side of the page. Reveal panels don't react well to changes in their width, so this one has a default width of 272 pixels.</p>
+    </div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	<!--End of Right Panel Reveal-->
+	
+	<!--Left Panel Push-->
+  <div id="leftPanelPush" data-role="panel"  data-display="push" data-position-fixed="true">
+    <div>This is an example of an <span class="specialText">data-display="push"</span> panel. .</div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	<!--End of Left Panel Push-->
+	
+	<!--Right Panel Push-->
+  <div id="rightPanelPush" data-role="panel" data-position="right" data-display="push" data-position-fixed="true">
+    <div>
+      <p>The code for this <span class="specialText">push</span> panel contains <span class="specialText">data-position="right"</span> so the panel displays on the right hand side of the page.</p>
+      <p>Normally panels have a width of 272 pixels.  This one has the width set to 500px in the page's CSS.</p>
+    </div>
+    <a href="#theContent" class="ui-btn" data-rel="close">Close panel</a> 
+	</div>
+	<!--End of Right Panel Push-->
+</div>
+<!--end of page-->
+</body>
+</html>

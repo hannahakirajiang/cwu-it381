@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Basic Layout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript">
+ $(function() {
+    convertTemperature = function()
+    {
+      var fahrTemp, celTemp, myTemp;
+      myTemp = $('#tempSlider').val();
+      myTemp = parseFloat(myTemp);  //convert string type to number type
+      celTemp = (myTemp - 32)*5/9;
+	  fahrTemp = (myTemp *9/5) + 32 ;
+      $('#celAnswer').val(myTemp +' degree Fahrenheit = ' + celTemp.toFixed(2) + ' degrees Celcius');
+	  $('#fahAnswer').val(myTemp +' degree Celcius' + fahrTemp.toFixed(2) +' degree Fahrenheit');
+    }
+    //$("#convertButton").click(convertTemperature);
+	$("#tempSlider").change(convertTemperature);
+  });
+  </script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>Temperature</h1>
+  </div>
+  <div class="ui-content" role="main">
+    <h1>Fahrenheit and Celcius</h1>
+    <p>
+      <label for="rangeinput">Enter a temperature:</label>
+      <input type="range" name="rangeinput" id="tempSlider" value="0" min="-212" max="212" />
+    </p>
+    <p>
+      <input type="button" value="Convert" id="convertButton">
+    </p>
+    <p>
+      <label for="celAnswer"> Fahrenheit to Celcius:</label>
+      <input type="text" name="textinput" id="celAnswer" value="" />
+      <label for="fahAnswer"> Celcius to Fahrenheit:</label>
+      <input type="text" name="textinput" id="fahAnswer" value="" />
+    </p>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>Converter</h4>
+  </div>
+</div>
+</body>
+</html>
