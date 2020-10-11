@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dialog Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+
+<body>
+<div data-role="page"  id="dialogpage" data-close-btn-text="Cancel" data-overlay-theme="b" data-theme="b">
+  <div data-role="header" data-position="fixed">
+    <h1>A Sample Page</h1>
+  </div>
+  <div class="ui-content" role="main">
+    <h3>Sample Page</h3>
+    <hr>
+    <p>This page has been created by adding data-rel="dialog" to the link on the parent page: </p>
+    <p class="codetext">&lt;div data-role=&quot;page&quot;  id=&quot;dialogpage&quot; data-rel=&quot;dialog&quot;&gt;</p>
+    <p>Clicking on any link in this dialog will close it. This button is linked back to the main page:<br>
+      <a href="collapsiblesWithDialogs.html" data-role="button">Return</a> </p>
+    <p>A cancel button is created by linking back to the page that called this dialog and adding <span class="codetext"> data-rel=&quot;back&quot;</span> to the link. </p>
+    <p class="codetext">&lt;a href=&quot;#&quot; data-role=&quot;button&quot; data-rel=&quot;back&quot;&gt;
+      Cancel&lt;/a&gt;<br>
+    </p>
+    <a href="#" data-role="button" data-rel="back">Cancel</a> </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>&copy; 2020 C.P. Wahle</h4>
+  </div>
+</div>
+</body>
+</html>

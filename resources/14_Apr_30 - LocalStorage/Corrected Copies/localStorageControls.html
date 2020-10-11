@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Local Storage from Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+<!-- JavaScript to load any previous data held in local storage
+	The firstName and lastName elements are filled using value, not innerHTML and the switch does not set a usertext value. -->
+     
+<script type="text/javascript">
+function getOldData(){
+	//retrieve theFirstName
+	if(localStorage.theFirstName){
+		var usertext=localStorage.theFirstName;
+	}
+	else {
+		var usertext = ''
+	}
+	document.getElementById('firstName').value = usertext;
+	
+	//retrieve theLastName
+	if(localStorage.theLastName){
+		var usertext=localStorage.theLastName;
+	}
+	else {
+		var usertext = ''
+	}
+	document.getElementById('lastName').value = usertext;
+
+	//retrieve the selected radio button (theOcean) 
+	if(localStorage.theOcean){
+		var whichOne=localStorage.theOcean;
+	//convert the localStorage string to an integer so the radio button works!
+		var x=parseInt(whichOne);
+		theform.RadioGroup1[x-1].checked=true;
+	}
+}
+
+function storemyform(){
+	//called to store information from the form into localStorage
+	var myFirstName = theform.firstName.value;
+	localStorage.theFirstName = myFirstName;
+	
+	var myLastName= theform.lastName.value;
+	localStorage.theLastName = myLastName;
+	
+	//loop through the radio buttons to see which one is checked
+	for (var i=0; i < 5; i++)
+   {
+   if (theform.RadioGroup1[i].checked)
+      {
+      var myOcean = theform.RadioGroup1[i].value;
+      }
+   }
+
+	localStorage.theOcean = myOcean;
+	
+	window.location="localStorageControlsResults.html"	
+}
+
+</script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+
+	<div data-role="header">
+    <h1>LocalStorage</h1>
+    </div>
+    
+    <div class="ui-content">
+    <form id="theform"><p>
+      <label for="firstName">First Name:</label>
+      <input type="text" name="firstName" id="firstName" autocomplete="off">
+    </p>
+      <p>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" autocomplete="off">
+      </p>
+      <div data-role="controlgroup">
+        <label>
+          <input name="RadioGroup1" type="radio" id="RadioGroup1_0" value="1" >
+          Atlantic</label>
+        
+        <label>
+          <input type="radio" name="RadioGroup1" value="2" id="RadioGroup1_1">
+          Pacific</label>
+       
+        <label>
+          <input type="radio" name="RadioGroup1" value="3" id="RadioGroup1_2">
+          Indian</label>
+        
+         <label>
+          <input type="radio" name="RadioGroup1" value="4" id="RadioGroup1_3">
+          Arctic</label>
+        
+         <label>
+          <input type="radio" name="RadioGroup1" value="5" id="RadioGroup1_4">
+          Antarctic</label>
+        
+      </div>
+      <p>
+        <input type="button" value="Submit" OnClick="javascript:storemyform();">
+      </p>
+    </form>
+    </div>
+       
+    <div data-role="footer">
+    <h1>LocalStorage</h1>
+    </div>
+</div>
+<!--get any data from localStorage when the page loads -->
+<script>
+	getOldData();
+</script>
+</body>
+</html>

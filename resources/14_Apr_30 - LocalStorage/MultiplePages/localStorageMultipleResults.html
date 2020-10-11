@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Local Storage Readout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	
+<script type="text/javascript">
+function getmynote(){
+	// retrieve fn (first name)
+	if(localStorage.theFirstName){
+		var usertext="First Name: " +localStorage.theFirstName;
+	}
+	else {
+		var usertext = 'No first name entered'
+	}
+	document.getElementById('firstName').innerHTML = usertext;
+	
+	// retrieve ln (last name)
+	if(localStorage.theLastName){
+		var usertext="Last Name: " +localStorage.theLastName;
+	}
+	else {
+		var usertext = 'No last name entered'
+	}
+	document.getElementById('lastName').innerHTML = usertext;
+	
+	// retrieve fc (favorite color)
+	if(localStorage.theFavColor){
+		var usertext="Favorite Color: " +localStorage.theFavColor;
+	}
+	else {
+		var usertext = 'No favorite color entered'
+	}
+	document.getElementById('favColor').innerHTML = usertext;
+	
+	// retrieve bc (least favorite color)
+	if(localStorage.theBadColor){
+		var usertext="Least Favorite Color: " +localStorage.theBadColor;
+	}
+	else {
+		var usertext = 'No least favorite color entered'
+	}
+	document.getElementById('notFavColor').innerHTML = usertext;
+	
+	// retrieve cv (favorite city)
+	if(localStorage.theFavCity){
+		var usertext="Favorite City: " +localStorage.theFavCity;
+	}
+	else {
+		var usertext = 'No favorite city entered'
+	}
+	document.getElementById('city').innerHTML = usertext;
+	
+	// retrieve ca (second favorite city)
+	if(localStorage.theOtherCity){
+		var usertext="Another favorite City: " +localStorage.theOtherCity;
+	}
+	else {
+		var usertext = 'No second favorite city entered'
+	}
+	document.getElementById('city2').innerHTML = usertext;
+}
+function clearItems() {
+	localStorage.clear();
+	window.location="localStorageMultipleResults.html"
+}
+</script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>Results</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="localStorageMultiple1.html" rel="external">name</a></li>
+        <li><a href="localStorageMultiple2.html" rel="external">colors</a></li>
+        <li><a href="localStorageMultiple3.html" rel="external">cities</a></li>
+        <li><a href="localStorageMultipleResults.html" rel="external" class="ui-btn-active ui-state-persist">results</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <div id="firstName"></div>
+    <div id="lastName"></div>
+    <div id="favColor"></div>
+    <div id="notFavColor"></div>
+    <div id="city"></div>
+    <div id="city2"></div>
+  </div>
+  <div>
+    <input type="button" value="Clear LocalStorage" OnClick="javascript:clearItems();">
+  </div>
+  <div data-role="footer">
+    <h1>From all forms</h1>
+  </div>
+</div>
+<script>
+	getmynote();
+</script>
+</body>
+</html>

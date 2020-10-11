@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile website starter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>Project Proposal</h1>
+</div>
+<div class="ui-content" role="main">
+	<ul data-role="listview">
+    <li><a href="#page1">Problem and Scope</a></li>
+    <li><a href="#page2">Audience</a></li>
+    <li><a href="#page3">Road Map</a></li>
+    <li><a href="#page4">Technology Used</a></li>
+    </ul>
+</div>
+<div data-role="footer">
+	<h4>IT 381</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Overview</h1>
+</div>
+<div class="ui-content">
+	<div id="description">
+  <p><b>Scope:</b> This site will be the mobile version of my 426 final project. In this platform, users can request a project by choosing the categories on the nav bar, and selecting their service types. They will be entering the start and due dates of their project, and they will be able to view their requested projects on "My project" nav tab. </p>
+	  <p><b>Problem:</b> This mobile site will solve the user experience problem of the desktop version. When users request their project on the phone, they will be able to have a user-friendly mobile version of the project requestor. </p>
+</div>
+</div>
+<div data-role="footer">
+<h4>Project Proposal</h4>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Intended Audience</h1>
+</div>
+<div class="ui-content">
+		<div id="Audience">
+	  <p>My target group is people who are looking for service in web development, web design, and web management. For this project, it is for poeple who are requesting service on their phone. I believe this platform will help them to request projects from me easily, and I will try my best to make this site accessible to operate to ensure it is for people with all levels of computer literacy.</p>
+    </div>
+</div>
+<div data-role="footer">
+<h4>IT 381</h4>
+</div>
+</div>
+
+<div data-role="page" id="page3">
+<div data-role="header">
+  <h1>Road Map</h1>
+</div>
+<div class="ui-content" role="main">
+	<div id="content">
+	<div id="RoadMap">
+	My plan for completing the most important features:
+		<ul>
+		<li>Finish defining the site map by 23th. (Cover page, nav bars for different categories, contact us page, my projects page, etc.)</li>
+		<li>Finish the basic UI design plan by May 24th.</li>
+		<li>Finish creating XML files for different services by May 26th.</li>
+		<li>Finish the script development by the June 5th.</li>
+		<li>Finish styling the pages with the JQuery theme and CSS by June 8th.</li>
+		<li>Finish the final checking and turn it in on June 12th.</li></ul>
+		<li>For the long term, I maybe will edit the UI to make it look even better. If there are new services, I will add it to the XML. I am still thinking about how to include the "edit project info" feature in the mobile ver. If I can't figure it out now, I will try my best to add this feature in the future. </li>
+</div>
+	</div>
+	</div>
+<div data-role="footer">
+<h4>IT 381</h4>
+</div>
+</div>
+
+<div data-role="page" id="page4">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Technical Use</h1>
+</div>
+<div class="ui-content" role="main">
+	<p>XML: I will use XML files to store basic information of different services.</p>
+	<p>Arc GIS: I will use Arc GIS to create a map showing my location, and will be adding this to the "Contact Us" page. </p>
+	<p>Local Storage: I will use local storage to keep user's project request. (I am still thinking about how to include the "edit project info" feature. </p>
+      	
+</div>
+<div data-role="footer">
+<h4>IT 381</h4>
+</div>
+</div>
+</body>
+</html>

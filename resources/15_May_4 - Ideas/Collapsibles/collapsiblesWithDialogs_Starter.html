@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Collapsibles and Dialogs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>Collapsibles with</h1>
+  </div>
+  <div data-role="content">
+    <ul data-role="listview">
+      <li><a href="#page1">Collapsibles with Dialog Examples</a></li>
+      <li><a href="#page2">No content, just a link.</a></li>
+      <li><a href="#page3">No content, just a link.</a></li>
+    </ul>
+  </div>
+  <div data-role="footer">
+    <h4>Dialog Examples</h4>
+  </div>
+</div>
+<div data-role="page" id="page1">
+  <div data-role="header"> <a href="#page" data-role="Button" data-icon="arrow-l">Home</a>
+    <h1>Collapsibles with Dialog Examples</h1>
+  </div>
+  <div role="main" class="ui-content">
+	<!-- data-role=collapsible set make the collapsible group work as an accordion - only one collapsible open at a time.-->
+    <div data-role="collapsible-set">
+	  <div data-role="collapsible">
+		<h3>Standard</h3>
+		  <div role="main" class="ui-content">
+		  <p>eee</p>
+		  <a href="dialogdemo1.html" data-role="button" data-rel="dialog">Standard Dialog</a> 
+		  </div>
+		</div>
+	  </div>
+	  <div data-role="collapsible">
+		<h3>Standard</h3>
+		  <div role="main" class="ui-content">
+		  <p>eee</p>
+		  <a href="dialogdemo2.html" data-role="button" data-rel="dialog">Standard Dialog with b</a> 
+		  </div>
+		</div>
+	  </div>
+	  
+  </div>
+  <div data-role="footer">
+    <h4>Dialog Examples</h4>
+  </div>
+</div>
+<div data-role="page" id="page2">
+  <div data-role="header">
+    <h1>Nothing</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h3>Nothing on this page!</h3>
+  </div>
+  <div data-role="footer">
+    <h4>Here</h4>
+  </div>
+</div>
+<div data-role="page" id="page3">
+  <div data-role="header">
+    <h1>Nothing</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <h3>Nothing on this page!</h3>
+  </div>
+  <div data-role="footer">
+    <h4>Here</h4>
+  </div>
+</div>
+</body>
+</html>

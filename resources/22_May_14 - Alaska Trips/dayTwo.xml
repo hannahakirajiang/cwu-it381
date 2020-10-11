@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Spectacular Skagway 1</tourName>
+<length>7 hours</length>
+<price>$129.50</price>
+<visit><![CDATA[<br>&#8226; White Pass & Yukon Route Railroad<br>&#8226; Klondike Summit<br>]]>
+</visit>
+<pic>skagway.jpg</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Spectacular Skagway 2</tourName>
+<length>10 hours</length>
+<price>$99.50</price>
+<visit><![CDATA[<br>&#8226; Outdoor Adventures<br>&#8226; Dog Sledding<br>]]>
+</visit>
+<pic>skagway3.jpg</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Spectacular Skagway 3</tourName>
+<length>10 hours</length>
+<price>$79.50</price>
+<visit><![CDATA[<br>&#8226; Gold Rush History<br>&#8226; Red Onion Saloon<br>]]>
+</visit>
+<pic>skagway2.jpg</pic>
+</excursion>
+</dataroot>

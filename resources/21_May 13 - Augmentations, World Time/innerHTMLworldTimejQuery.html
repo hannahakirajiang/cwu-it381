@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>World Time</title>
+<!-- Set screen width and scale based on device being used. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+<style type="text/css">
+<!--
+li {
+	float: left;
+	padding: 16px;
+	border: medium solid #000;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-image: url(day.jpg);
+	width:165px;
+}
+.clearIt {
+	clear: left;
+}
+ul {
+	list-style-type: none;
+	color: #FF0;
+}
+.cityNames {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 24px;
+	color: #FFF;
+}
+.dateText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFF;
+}
+-->
+</style>
+</head>
+<!--start the timer -->
+<body onload = "displayTheTime()">
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>World</h1>
+</div>
+<div class="ui-content" role="main">
+<!--Set the div to contain the clock -->
+<div id="GlobalClock">
+  <ul>
+ <!-- Id each list item (li) so the background can be set. Class the cityNames, set the id so the "XXXXX" can be replaced by inner HTML statements-->
+	<li id="localTime">
+     	<span class="cityNames">Local Time</span>
+        <br><span id="local">XXXXXX</span>
+        <br><span class="dateText" id="localDate">XXXX</span>
+	</li>
+    <li id="londonTime">
+    	<span class="cityNames">London</span>
+    	<br><span id="london"> XXXXXX</span>
+        <br><span class="dateText" id="londonDate">XXXX</span>
+   	</li>
+    <li id="parisTime">
+    <span class="cityNames">Paris</span>
+    	<br><span id="paris">XXXXXX</span>
+        <br><span class="dateText" id="parisDate">XXXX</span>
+    </li>
+    <li id="athensTime">
+    	<span class="cityNames">Athens</span>
+    	<br><span id="athens">XXXXXX</span>
+    	<br><span class="dateText" id="athensDate">XXXX</span>
+    </li>
+    <li id="mumbaiTime">
+    	<span class="cityNames">Mumbai</span>
+        <br><span id="mumbai">XXXXXX</span>
+        <br><span class="dateText" id="mumbaiDate">XXXX</span>
+    </li>
+    <li id="tokyoTime">
+    	<span class="cityNames">Tokyo</span>
+        <br><span id="tokyo">XXXXXX</span>
+        <br><span class="dateText" id="tokyoDate">XXXX</span>
+        </li>
+  </ul>
+  	<div class="clearIt"></div>
+</div>
+</div>
+<div data-role="footer">
+	<h4>Times</h4>
+</div>
+</div>
+<script type="text/javascript">	
+
+	function displayTheTime()
+	{
+	//get the time from the local computer's clock
+	var nowTime = new Date();
+
+	//display the local time and Date - set the background image to the night jpg if necessary
+	$('#local').html(nowTime.toLocaleTimeString()) ;
+	$('#localDate').html(nowTime.toLocaleDateString());
+	if (nowTime.getHours() <6 || nowTime.getHours()>=18) {$('#localTime').css("background-image", "url(night.jpg)");}
+	
+	//adjust nowTime to the time in London using the computer's TimezoneOffset. Display the new time and set the background image.
+	nowTime.setMinutes(nowTime.getMinutes() + nowTime.getTimezoneOffset()+60);
+	$('#london').html(nowTime.toLocaleTimeString()) ;
+	$('#londonDate').html(nowTime.toLocaleDateString());
+	if (nowTime.getHours() <6 || nowTime.getHours()>=18) {$('#londonTime').css("background-image", "url(night.jpg)");}
+	
+	//adjust nowTime to the time in Paris using the computer's TimezoneOffset. Display the new time and set the background image.
+	
+	nowTime.setMinutes(nowTime.getMinutes() + 60);
+	$('#paris').html(nowTime.toLocaleTimeString()) ;
+	$('#parisDate').html(nowTime.toLocaleDateString());
+	if (nowTime.getHours() <6 || nowTime.getHours()>=18) {$('#parisTime').css("background-image", "url(night.jpg)");}
+	
+	//adjust nowTime to the time in Athens using the computer's TimezoneOffset. Display the new time and set the background image.
+	nowTime.setMinutes(nowTime.getMinutes() + 60);
+	$('#athens').html(nowTime.toLocaleTimeString()) ;
+	$('#athensDate').html(nowTime.toLocaleDateString());
+	if (nowTime.getHours() <6 || nowTime.getHours()>=18) {$('#athensTime').css("background-image", "url(night.jpg)");}
+	
+	
+	//adjust nowTime to the time in Mumbai using the computer's TimezoneOffset. Display the new time and set the background image.
+	nowTime.setMinutes(nowTime.getMinutes() + 150);
+	$('#mumbai').html(nowTime.toLocaleTimeString()) ;
+	$('#mumbaiDate').html(nowTime.toLocaleDateString());
+	if (nowTime.getHours() <6 || nowTime.getHours()>=18) {$('#mumbaiTime').css("background-image", "url(night.jpg)");}
+	
+	//adjust nowTime to the time in Tokyo using the computer's TimezoneOffset. Display the new time and set the background image.
+	nowTime.setMinutes(nowTime.getMinutes() + 210);
+	$('#tokyo').html(nowTime.toLocaleTimeString()) ;
+	$('#tokyoDate').html(nowTime.toLocaleDateString());
+	if (nowTime.getHours() <6 || nowTime.getHours()>=18) {$('#tokyoTime').css("background-image", "url(night.jpg)");}
+	
+	//start the timer so the function is called every second
+	setTimeout("displayTheTime()",1000);
+	return;
+	}
+	
+	displayTheTime();
+</script>
+	
+</body>
+</html>

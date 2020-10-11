@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Catching Ketchikan 1</tourName>
+<length>6 hours</length>
+<price>$109.50</price>
+<visit><![CDATA[<br>&#8226; Great Alaskan Lumberjack Show<br>&#8226; George Inlet Lodge<br>]]>
+</visit>
+<pic>ketchikan.jpg</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Catching Ketchikan 2</tourName>
+<length>5 hours</length>
+<price>$89.50</price>
+<visit><![CDATA[<br>&#8226; Totem Bight State Park<br>&#8226; Saxman Native Village<br>]]>
+</visit>
+<pic>ketchikan2.jpg</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Catching Ketchikan 3</tourName>
+<length>7 hours</length>
+<price>$78.50</price>
+<visit><![CDATA[<br>&#8226; Alaska Rainforest Sanctuary<br>&#8226; Misty Fjords National Monument<br>]]>
+</visit>
+<pic>ketchikan3.jpg</pic>
+</excursion>
+</dataroot>

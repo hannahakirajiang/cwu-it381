@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Local Storage Readout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript">
+function getmynote(){
+	if(localStorage.theFirstName){
+		var usertext="First Name: " +localStorage.theFirstName;
+	}
+	else {
+		var usertext = 'No First Name entered'
+	}
+	document.getElementById('firstName').innerHTML = usertext;
+	
+	if(localStorage.theLastName){
+		var usertext="Last Name: " +localStorage.theLastName;
+	}
+	else {
+		var usertext = 'No Last Name entered'
+	}
+	document.getElementById('lastName').innerHTML = usertext;
+	
+	if(localStorage.theOcean){
+		var whichOne=localStorage.theOcean;
+		var x=parseInt(whichOne);
+		
+		usertext="No Ocean selected";
+		switch(x)
+		{
+			case 1:
+				usertext="Atlantic";
+				break;
+			case 2:
+				usertext="Pacific";
+				break;
+			case 3:
+				usertext="Indian";
+				break;
+			case 4:
+				usertext="Arctic";
+				break;
+			case 5:
+				usertext="Antarctic";
+				break;
+		}
+	}
+	else {
+		var usertext = 'No Ocean entered'
+	}
+	document.getElementById('oceanResult').innerHTML = "Ocean: "+usertext;
+}
+
+function clearItems() {
+	localStorage.clear();
+	window.location="localStorageControls_Starter.html"
+}
+</script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>Results</h1>
+  </div>
+  <div class="ui-content">
+    <div id="firstName"></div>
+    <div id="lastName"></div>
+    <div id="oceanResult"></div>
+  </div>
+  <div>
+    <input type="button" value="Clear LocalStorage and Return" OnClick="javascript:clearItems();">
+  </div>
+  <div>
+    <input type="button" value="Keep LocalStorage and Return" OnClick="javascript:window.location='localStorageControls.html';">
+  </div>
+  <div data-role="footer">
+    <h1>From Form</h1>
+  </div>
+</div>
+<script>
+	getmynote();
+</script>
+</body>
+</html>

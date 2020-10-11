@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Circles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+<script type="text/javascript">
+	$(document).ready(function() {	
+    var canvas= $("#myCanvas");
+	var context = canvas.get(0).getContext("2d");
+	
+	//adjust the div size to the window
+	canvas.attr("width", $(window).get(0).innerWidth);
+	canvas.attr("height", $(window).get(0).innerHeight);
+	
+	var canvasWidth = canvas.width();
+	var canvasHeight = canvas.height();
+	
+	var playAnimation = true;
+	
+	var startButton = $("#startAnimation");
+	var stopButton = $("#stopAnimation");
+	
+	startButton.hide();
+	startButton.click(function() {
+		$(this).hide();
+		stopButton.show();		
+		playAnimation = true;
+		animate();
+	});
+	
+	stopButton.click(function() {
+		$(this).hide();
+		startButton.show();		
+		playAnimation = false;
+	});
+	
+	var Shape = function(x,y,width,height){
+		this.x = x;
+		this.y = y;
+		this.width = width;
+		this.height = height;
+		this.radius = Math.random()*(canvasWidth/2);
+		this.angle = 0;
+		this.speed = Math.random()*10;
+		this.r = Math.floor(Math.random()*255);
+		this.g = Math.floor(Math.random()*255);
+		this.b = Math.floor(Math.random()*255);
+	};
+	
+	var shapes = [];
+	
+	for (var i=0; i<50; i++) {
+        //var x=canvasWidth/2;
+		//var y=canvasHeight/2;
+		var x=y=Math.random()*canvasWidth;
+		//var y=Math.random()*canvasHeight;
+		//var width = height = Math.random()*300;
+		var width = height = 30;
+		shapes.push(new Shape(x,y,width,height));
+	};
+	
+	function animate(){
+		context.clearRect(0,0,canvasWidth,canvasHeight);
+		var shapesLength = shapes.length;
+		for (var i=0; i<shapesLength; i++) {
+			var tmpShape = shapes[i];			
+			var x = tmpShape.x+(tmpShape.radius*Math.cos(tmpShape.angle*(Math.PI/180)));
+			var y = tmpShape.y+(tmpShape.radius*Math.sin(tmpShape.angle*(Math.PI/180)));
+			tmpShape.angle += tmpShape.speed;
+			//tmpShape.angle +=15;
+			if (tmpShape.angle >360) {
+				tmpShape.angle -=360;
+			};
+			
+			context.fillStyle = 'rgba(' + tmpShape.r + ',' + tmpShape.g + ',' + tmpShape.b + ', 0.7)';
+			context.beginPath();
+			context.arc(x,y, tmpShape.width,0,Math.PI*2,true);
+			context.closePath();
+			context.fill();
+		};
+		if (playAnimation) {
+			setTimeout(animate, 33);
+		};
+	};
+	animate();
+	});
+</script>
+
+</head>
+
+<body>
+<div data-role="page" id="page">
+
+	<div data-role="header">
+     <a href="#" data-role="button" id="startAnimation">Start</a> 
+   <h1>Circles</h1>
+    <a href="#" data-role="button" id="stopAnimation">Stop</a>
+    </div>
+    
+    <div data-role="content">
+    <canvas id="myCanvas" width="320" height="320"></canvas>
+    </div>
+    
+    <div data-role="footer">
+    <h1>in orbit</h1>
+    </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Best of Anchorage 1</tourName>
+<length>10 hours</length>
+<price>$109.50</price>
+<visit><![CDATA[<br>&#8226; Prince William Sound<br>&#8226; Portage Glacier<br>]]></visit>
+<details>The fast boat trip across Prince William Sound to Portage Glacier includes a visit to the Begich/Boggs Visitor Center. </details>
+
+<pic>anchorage.jpg</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Best of Anchorage 2</tourName>
+<length>10 hours</length>
+<price>$119.50</price>
+<visit><![CDATA[<br>&#8226; Turnagain Arm<br>&#8226; Mt. Alyeska Tram<br>]]>
+</visit>
+<details>Take a scenic ride to the top of Mt. Alyeska where you can see for miles!  See seven glaciers, the Turnagain Arm and the Chugach Mountain range.</details>
+<pic>anchorage3.jpg</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Best of Anchorage 3</tourName>
+<length>10 hours</length>
+<price>$89.50</price>
+<visit><![CDATA[<br>&#8226; Alaska Wildlife Conservation Center<br>&#8226; Outdoor Adventures<br>]]>
+</visit>
+<details>Get up close and personal with some of Alaska's wildlife at the Center dedicated to conservation, education, research and animal care.</details>
+<pic>anchorage2.jpg</pic>
+</excursion>
+</dataroot>

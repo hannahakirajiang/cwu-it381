@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Basic Layout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<style type="text/css">
+
+.ui-icon-myicon:after {
+background-image: url("myicon1.png");
+background-size: 18px 18px;
+}
+/*if main icon is a .svg use this to sub in a .png if necessary on older browsers */
+.ui-nosvg .ui-icon-myicon:after {
+background-image: url("myicon1.png");
+}
+
+</style>
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>Custom Icons</h1>
+</div>
+<div class="ui-content" role="main">
+	<!--With a disc and shadow on the button-->
+    <button  href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-myicon">A .png custom icon (myicon1.png) with button shadow</button>
+	
+	<button  href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-myicon">A .png custom icon (myicon1.png) with button shadow</button>
+	
+	<button  href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-top ui-icon-myicon">A .png custom icon (myicon1.png) with button shadow</button>
+	
+	<button  href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-bottom ui-icon-myicon">A .png custom icon (myicon1.png) with button shadow</button>
+	
+	<!--With a disc and no shadow on the button-->
+    <button  href="#" class="ui-btn ui-corner-all ui-btn-icon-left ui-icon-myicon">A .png custom icon (myicon1.png) - no button shadow</button>
+
+	<!--No disc-->
+    <button  href="#" class="ui-nodisc-icon ui-btn ui-corner-all ui-btn-icon-left ui-icon-myicon">A no disc .png custom icon (myicon1.png)</button>
+	
+	<!--Icon only-->
+    <button  href="#" class="ui-nodisc-icon ui-btn ui-corner-all ui-btn-icon-left ui-icon-myicon ui-btn-icon-notext">A icon only no disc .png custom icon (myicon1.png)</button>
+		
+</div>
+<div data-role="footer">
+	<h4>Custom Icons</h4>
+</div>
+</div>
+
+</body>
+</html>

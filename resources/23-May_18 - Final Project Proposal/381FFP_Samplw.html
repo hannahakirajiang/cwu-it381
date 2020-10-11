@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile website starter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>Project Proposal</h1>
+</div>
+<div class="ui-content" role="main">
+	<ul data-role="listview">
+    <li><a href="#page1">Problem and Scope</a></li>
+    <li><a href="#page2">Audience</a></li>
+    <li><a href="#page3">Road Map</a></li>
+    <li><a href="#page4">Technology Used</a></li>
+    </ul>
+</div>
+<div data-role="footer">
+	<h4>IT 381</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Scope</h1>
+</div>
+<div class="ui-content">
+	<div id="description">
+	<p>Scope: This app will be a continuation of my IT 322 project. This app will sell ice cream as well as direct the user to nearby ice cream shops. It will give a condensed version of information provided on the desktop website. The purpose of the app is to have quick access to purchase ice cream as well as easy directions. There will be no comparisons to other products, but there will be reviews as well as images.</p>
+  <p>Problem: This app will solve the problem of ease of purchase. Instead of getting onto a desktop, the user can order ice cream from their phone. It will also be easier to get directions since most people use their smartphones as a navigational tool. This app will be primarily for the consumer to order ice cream/visit the ice cream shop easily.</p>
+</div>
+</div>
+<div data-role="footer">
+<h4>Project Proposal</h4>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Intended Audience</h1>
+</div>
+<div class="ui-content">
+		<div id="Audience">
+			<p>I will be using the adult audience from my IT322 project. Specifically, I will be targeting customers who have already purchased ice cream from the desktop website and know their way around the products. The desktop website pushes online purchasing first, but the app will push directions to brick and mortar stores first.</p>
+	  <p>Here is my original target audience blurb from IT322: "My first demographic will be adults ages 30-50. These adults are more concerned with nutritional elements and dietary restrictions, but they still want to have a tasty ice cream. They want a guilt-free guilty pleasure with more complex and adventurous flavors such as exotic fruit and alcohol. Extra additions to the webpage will be minimal and simple to navigate. Purchasing information will be laid out with how the ice cream will be kept frozen upon delivery. Online purhcasing is pushed first, then brick and mortar stores."</p>
+	</div>
+</div>
+<div data-role="footer">
+<h4>IT 381</h4>
+</div>
+</div>
+
+<div data-role="page" id="page3">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Road Map</h1>
+</div>
+<div class="ui-content" role="main">
+	<div id="content">
+	<div id="RoadMap">
+	<p>Road map for completion:</p>
+		<ul>
+			<li>HTML skeleton created by 5/23/2020</li>
+			<li>Information from previous project adjusted for mobile by 5/25/2020</li>
+			<li>XML created by 5/27/2020</li>
+			<li>Home page created by 5/30/2020</li>
+			<li>Local storage usage created by 6/2/2020</li>
+			<li>Calculation page created by 6/4/2020</li>
+			<li>Dynamic map page created by 6/6/2020</li>
+			<li>CSS integration by 6/8/2020</li>
+			<li>XML and Jquery linked by 6/10/2020</li>
+			<li>Final project completion by 6/12/2020</li>
+			<li>Long term release schedule can include the introduction of new ice cream flavors, sales, and new shop locations. Most of this can be accomplished by editting the XML.</li>
+		</ul>
+</div>
+	</div>
+	</div>
+<div data-role="footer">
+<h4>IT 381</h4>
+</div>
+</div>
+
+<div data-role="page" id="page4">
+<div data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Technical Use</h1>
+</div>
+<div class="ui-content" role="main">
+	<p>The three main technological usages of this mobile site will be XML, usuable map, and local storage.</p>
+	<p>XML: An external XML file will be used to keep all of the ice cream flavor information. This is important for continued use of the app to adjust flavors, change prices, and create sales. Most of the secondary pages will be product pages.</p>
+	<p>Map: ArcGIS will be used in order to create a map on this mobile site. The map is one of the most important features because most people use their mobile phones to aid in navigation. This map will allow you to see local ice cream stops near you as well as give directions.</p>
+	<p>Local Storage: Local storage will be used to keep track of the user's cart. If the user puts one or more flavors into their cart, they will be able to go to a tertiary check-out page that is holding the local storage informatoin. Here they will get a calculation on the total cost of their purchase.</p>
+</div>
+<div data-role="footer">
+<h4>IT 381</h4>
+</div>
+</div>
+</body>
+</html>

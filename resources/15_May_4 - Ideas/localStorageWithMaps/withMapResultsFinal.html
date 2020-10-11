@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Local Storage Readout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<style type="text/css">
+#map {
+	width: 384px;
+	margin-left: auto;
+	margin-right: auto;
+}
+</style>
+
+<script type="text/javascript">
+
+
+function getmynote(){
+	if(localStorage.fn){
+		var usertext="First Name: " +localStorage.fn;
+	}
+	else {
+		var usertext = 'No First Name entered'
+	}
+	document.getElementById('firstName').innerHTML = usertext;
+	
+	if(localStorage.ln){
+		var usertext="Last Name: " +localStorage.ln;
+	}
+	else {
+		var usertext = 'No Last Name entered'
+	}
+	document.getElementById('lastName').innerHTML = usertext;
+	
+	if(localStorage.oc){
+		var whichOne=localStorage.oc;
+		
+		var x=parseInt(whichOne);
+		usertext="No Ocean selected";
+		switch(x)
+		{
+			case 1:
+				usertext="Atlantic";
+				document.getElementById('map').innerHTML='<img src="1.jpg" width="384" height="191" alt=""/>';
+				break;
+			case 2:
+				usertext="Pacific";
+				document.getElementById('map').innerHTML='<img src="2.jpg" width="384" height="191" alt=""/>';
+				break;
+			case 3:
+				usertext="Indian";
+				document.getElementById('map').innerHTML='<img src="3.jpg" width="384" height="191" alt=""/>';
+				break;
+			case 4:
+				usertext="Arctic";
+				document.getElementById('map').innerHTML='<img src="4.jpg" width="384" height="191" alt=""/>';
+				break;
+			case 5:
+				usertext="Antarctic";
+				document.getElementById('map').innerHTML='<img src="5.jpg" width="384" height="191" alt=""/>';
+				break;
+		}
+	}
+	else {
+		var usertext = 'No Ocean entered';
+		document.getElementById('map').innerHTML='<img src="world.jpg" width="384" height="191" alt=""/>';
+	}
+	document.getElementById('oceanResult').innerHTML = "Ocean: "+usertext;
+	
+}
+
+function clearItems() {
+	localStorage.clear();
+	window.location="withMap.html"
+}
+</script>
+
+
+
+</head>
+
+<body>
+<div data-role="page" id="page">
+
+	<div data-role="header">
+    <h1>Results</h1>
+    </div>
+    
+    <div class="ui-content">
+    <div id="firstName"></div>
+    <div id="lastName"></div>
+    <div id="oceanResult"></div>
+    </div>
+    <div id="map"></div>
+    <div>
+<input type="button" value="Clear LocalStorage and Return" OnClick="javascript:clearItems();">
+</div>
+<div>
+<input type="button" value="Keep LocalStorage and Return" OnClick="javascript:window.location='withMap.html';">
+</div>
+    
+    <div data-role="footer">
+    <h1>From Form</h1>
+    </div>
+</div>
+
+<script>
+	getmynote();
+</script>
+</body>
+</html>

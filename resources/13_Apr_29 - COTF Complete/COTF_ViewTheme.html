@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Computers of the Future</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="themes/COTF1.min.css" />
+<link rel="stylesheet" href="themes/COTF1.css" />
+
+<script src="COTF_ViewModel.js"></script>
+	
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content" role="main">
+  <div id="inventoryList" data-role="listview" data-filter="true"></div>
+  </div>
+<div data-role="footer" data-position="fixed">
+	<h4>Inventory</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content">
+<div id="thePic">Pic</div>
+<div>The <span id="theModel"> </span> computer, manufactured by <span id="theBrand"> </span> is only $<span id="theCost"> </span> at Computers of the Future.</div>
+</div>
+<a href="#page2" class="ui-btn">Calculate Payments</a>
+<div data-role="footer" data-position="fixed">
+<h4><span id="footerText"> </span></h4>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header">
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content" role="main">
+<div id="theSmallPic">Pic</div>
+   <div class="ui-field-contain">
+      <label for="P">The <span id="CompName"> </span> costs:</label>
+      <input type="number" name="P" id="P" data-clear-btn="true"  placeholder="Very Expensive!">
+      </div>
+      <div class="ui-field-contain">
+      <label for="T">Sales Tax Rate:</label>
+      <input type="number" name="T" id="T" readonly >
+      </div>
+      <div class="ui-field-contain">
+      <label for="R">Annual Percentage Rate:</label>
+      <input type="number" name="R" id="R" readonly >
+      </div>
+      <div class="ui-field-contain">
+      <label for="N">Number of Monthly Payments:</label>
+      <input type="number" name="N" id="N" data-clear-btn="true">
+    </div>
+    <p>
+      <a href="#" class="ui-btn" id="calcButton">Calculate</a>
+     
+    </p>
+  <div id="Answer"></div>
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Payment Calculator</h4>
+</div>
+</div>
+</body>
+
+</html>
+
+
+
+

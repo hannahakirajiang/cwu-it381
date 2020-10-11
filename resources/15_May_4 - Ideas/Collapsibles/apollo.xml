@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2013-01-28T08:48:44">
+<apollo>
+<ID>1</ID>
+<Flight>Apollo 1</Flight>
+<Year>1967</Year>
+<LaunchVehicle>Saturn IB</LaunchVehicle>
+<Spacecraft>Apollo CSM</Spacecraft>
+<Crew>Virgil Grissom, Edward White, Roger Chaffee</Crew>
+<Notes>January 27, 1967-Fire on the pad during test simulation and crew killed</Notes>
+<Patch>apollo1_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-1/apollo-1.htm</thelink>
+</apollo>
+<apollo>
+<ID>2</ID>
+<Flight>Apollo 7</Flight>
+<Year>1968</Year>
+<LaunchVehicle>Saturn IB</LaunchVehicle>
+<Spacecraft>Apollo CSM</Spacecraft>
+<Crew>Walter Schirra, Donn Eisele,  Walt Cunningham</Crew>
+<LaunchDate>10/11/1968</LaunchDate>
+<LandingDate>10/22/1968</LandingDate>
+<Duration>10.84 days</Duration>
+<Notes>Earth orbit test of CSM</Notes>
+<Patch>apollo7_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-7/apollo-7.htm</thelink>
+</apollo>
+<apollo>
+<ID>3</ID>
+<Flight>Apollo 8</Flight>
+<Year>1968</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM</Spacecraft>
+<Crew>Frank Borman, William Anders,   James Lovell</Crew>
+<LaunchDate>12/21/1968</LaunchDate>
+<LandingDate>12/27/1968</LandingDate>
+<Duration>6.13 days</Duration>
+<Notes>1st men in lunar orbit</Notes>
+<Patch>apollo8_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-8/apollo-8.htm</thelink>
+</apollo>
+<apollo>
+<ID>4</ID>
+<Flight>Apollo 9</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>James McDivitt, David Scott, Russell Schweickart</Crew>
+<LaunchDate>3/3/1969</LaunchDate>
+<LandingDate>3/13/1969</LandingDate>
+<Duration>10.04 days</Duration>
+<Notes>Earth orbit test of LEM</Notes>
+<Patch>apollo9_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-9/apollo-9.htm</thelink>
+</apollo>
+<apollo>
+<ID>5</ID>
+<Flight>Apollo 10</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Eugene Cernan, John Young, Thomas Stafford</Crew>
+<LaunchDate>5/18/1969</LaunchDate>
+<LandingDate>5/26/1969</LandingDate>
+<Duration>8.00 days</Duration>
+<Notes>Lunar landing rehearsal</Notes>
+<Patch>apollo10_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-10/apollo-10.htm</thelink>
+</apollo>
+<apollo>
+<ID>6</ID>
+<Flight>Apollo 11</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Neil Armstrong, Edwin Aldrin, Michael Collins</Crew>
+<LaunchDate>7/16/1969</LaunchDate>
+<LandingDate>7/24/1969</LandingDate>
+<Duration>8.14 days</Duration>
+<Notes>First lunar landing</Notes>
+<Patch>apollo11_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-11/apollo-11.htm</thelink>
+</apollo>
+<apollo>
+<ID>7</ID>
+<Flight>Apollo 12</Flight>
+<Year>1969</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Charles Conrad, Richard Gordon, Alan Bean</Crew>
+<LaunchDate>11/14/1969</LaunchDate>
+<LandingDate>11/24/1969</LandingDate>
+<Duration>10.19 days</Duration>
+<Notes>First (broken) color camera on the Moon</Notes>
+<Patch>apollo12_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-12/apollo-12.htm</thelink>
+</apollo>
+<apollo>
+<ID>8</ID>
+<Flight>Apollo 13</Flight>
+<Year>1970</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>James Lovell, Fred Haise, Jack Swigert</Crew>
+<LaunchDate>4/11/1970</LaunchDate>
+<LandingDate>4/17/1970</LandingDate>
+<Duration>5.95 days</Duration>
+<Notes>Landing aborted due to an oxygen tank explosion</Notes>
+<Patch>apollo13_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-13/apollo-13.htm</thelink>
+</apollo>
+<apollo>
+<ID>9</ID>
+<Flight>Apollo 14</Flight>
+<Year>1971</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM &amp; LEM</Spacecraft>
+<Crew>Alan Shepard, Stuart Roosa, Edgar Mitchell</Crew>
+<LaunchDate>1/31/1971</LaunchDate>
+<LandingDate>2/9/1971</LandingDate>
+<Duration>9.00 days</Duration>
+<Notes>First golf ball hit on the moon</Notes>
+<Patch>apollo14_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-14/apollo-14.htm</thelink>
+</apollo>
+<apollo>
+<ID>10</ID>
+<Flight>Apollo 15</Flight>
+<Year>1971</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM, LEM &amp; LRV</Spacecraft>
+<Crew>David Scott, James Irwin, Alfred Wordon</Crew>
+<LaunchDate>7/26/1971</LaunchDate>
+<LandingDate>8/7/1971</LandingDate>
+<Duration>12.30 days</Duration>
+<Notes>1st use of Lunar Roving Vehicle (LRV)</Notes>
+<Patch>apollo15_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-15/apollo-15.htm</thelink>
+</apollo>
+<apollo>
+<ID>11</ID>
+<Flight>Apollo 16</Flight>
+<Year>1972</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM, LEM &amp; LRV</Spacecraft>
+<Crew>John Young, Thomas Mattingly, Charles Duke</Crew>
+<LaunchDate>4/16/1972</LaunchDate>
+<LandingDate>4/27/1972</LandingDate>
+<Duration>11.08 days</Duration>
+<Notes>First landing on lunar highlands</Notes>
+<Patch>apollo16_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-16/apollo-16.htm</thelink>
+</apollo>
+<apollo>
+<ID>12</ID>
+<Flight>Apollo 17</Flight>
+<Year>1972</Year>
+<LaunchVehicle>Saturn V</LaunchVehicle>
+<Spacecraft>Apollo CSM, LEM &amp; LRV</Spacecraft>
+<Crew>Eugene Cernan, Ronald Evans, Harrison Schmitt</Crew>
+<LaunchDate>12/7/1972</LaunchDate>
+<LandingDate>12/19/1972</LandingDate>
+<Duration>12.58 days</Duration>
+<Notes>Final manned lunar mission</Notes>
+<Patch>apollo17_patch.gif</Patch>
+<thelink>http://www-pao.ksc.nasa.gov/history/apollo/apollo-17/apollo-17.htm</thelink>
+</apollo>
+</dataroot>
