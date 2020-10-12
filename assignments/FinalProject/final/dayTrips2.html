@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alaska Cruise Excursions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+	
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="themes/finalproject.css" />
+	<link rel="stylesheet" href="themes/finalproject.min.css" />
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header">
+    	<h1>Project Requestor</h1>
+	<a href="#page3" class="ui-btn-right">Questions?</a>
+    <div data-role="navbar">
+ 		<ul>
+ 		<li><a href="dayTrips1.html" data-ajax="false" >Development</a></li>
+ 		<li><a href="dayTrips2.html" data-ajax="false" class="ui-btn-active ui-state-persist">Design</a></li>
+ 		<li><a href="dayTrips3.html" data-ajax="false">Management</a></li>
+ 		<li><a href="dayTripsCart.html" data-ajax="false">My Projects</a></li>
+ 		</ul>
+ 	</div>
+    </div>
+    <div data-role="content">
+	<div id="inventoryList" data-role="listview" data-filter="true"></div>
+  	</div>   
+<div data-role="footer" class="foot" data-position="fixed">
+    </div>
+</div>
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		 <a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Back</a>
+    	<h1>Services Details</h1>
+    <div data-role="navbar" data-iconpos="left">
+ 	<ul>
+ 	<li><a href="dayTrips1.html" data-ajax="false" class="ui-btn ui-state-disabled">Development</a></li>
+ 	<li><a href="dayTrips2.html" data-ajax="false" data-icon="arrow-l">Design</a></li>
+ 	<li><a href="dayTrips3.html" data-ajax="false" class="ui-btn ui-state-disabled">Management</a></li>
+ 	<li><a href="dayTripsCart.html" data-ajax="false" data-icon="check">My Projects</a></li>
+ 	</ul>
+ 	</div>
+    </div>
+    <div data-role="content">
+		<h3><div id="currentPicDetail"></div></h3>
+        <div id="tourNameDetail"></div>
+		<div id="tourLengthDetail"></div>
+		<div id="currentPriceDetail"></div>
+		<div id="currentVisitDetail"></div>
+        <div><a href= "dayTripsCart.html" class ="ui-btn ui-icon-check ui-btn-icon-left" data-ajax="false">Request A Project</a></div>
+  	</div>   
+  	<div data-role="footer" class="foot" data-position="fixed">
+    </div>
+	
+	
+<div data-role="page" id="page3">
+<div data-role="header" >
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Back</a>
+	<h1>About Us</h1>
+</div>
+<div id="wrapper" style="width:90%;margin:auto">
+<h3>About Akira Web Services Inc</h3>
+<p>We are professional web developers &amp; UI/UX designers located in Seattle! Our services include web development, digital design, and website management. We enjoy craft delightful experiences that let our customers achieve their goals. We will do our best to bring you the best service! </p>
+<h3>How it works?</h3>
+<p>Once you requested your project, you will get an confirmation email. Please provide your project information by directly replying the email and we will scedule a call with you to discuss the project requirement and the price.</p>
+
+<h3>Contact Us</h3>
+<p>Have a question? Please contact us by filling out the webform and we will get back to you as soon as possible!</p>
+<div id="webform">
+<p>
+  <label for="textfield">Your Name:</label>
+  <input type="text" name="textfield" id="textfield">
+</p>
+<p>
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email">
+</p>
+<p>
+  <label for="select">Subjects:</label>
+  <select name="select" id="select">
+    <option value="1">Development</option>
+    <option value="2">Design</option>
+    <option value="3">Management</option>
+	<option value="4">Others</option>
+  </select>
+</p>
+<p>
+  <label for="textarea">Message:</label>
+  <textarea name="textarea" id="textarea"></textarea>
+</p>
+<p>
+  <input type="submit" name="submit" id="submit" value="Submit">
+</p>
+	</div>
+</div>
+<div data-role="footer" class="foot" data-position="fixed">
+</div>
+</div>
+	
+	
+	
+<script src="dayTrips_model.js"></script>
+<script src="dayTrips_ViewModel2.js"></script>
+<script>
+	var d=new Date();
+	var d1 = d.getFullYear()
+	$(".foot").html("<h1>"+d1+" Akira Web Service&#8482;</h1>");
+</script>
+</body>
+</html>

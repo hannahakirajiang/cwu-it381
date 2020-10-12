@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>UI/UX Design</tourName>
+<length>I will be designing your UI/UX project with the tools and techniques I mentioned below. The length for this type of project is usually between 15 to 30 days depends on the specific requirements.</length>
+<price>Once you requested, you will get an confirmation email. Please provide your UI/UX design project information by directly replying the email and I will scedule a call with you to futuremore discuss the design project requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; Adobe XD<br>&#8226; Figma<br>&#8226; Sketch<br>]]>
+</visit>
+<pic>ux.png</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Graphic Design</tourName>
+<length>I will be designing your graphic art with the tools and techniques I mentioned below. The length for this type of project is usually between 5 to 12 days depends on the specific requirements.</length>
+<price>Once you requested, you will get an confirmation email. Please provide your graphic design project information by directly replying the email and I will scedule a call with you to futuremore discuss the design project requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; Adobe Photoshop<br>&#8226; Adobe Illustrator<br>&#8226; Adobe InDesign<br>]]>
+</visit>
+<pic>graphic.png</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Animation Design</tourName>
+<length>I will be designing your animation project with the tools and techniques I mentioned below. The length for this type of project is usually between 15 to 30 days depends on the specific requirements.</length>
+<price>Once you requested, you will get an confirmation email. Please provide your animation project information by directly replying the email and I will scedule a call with you to futuremore discuss the design project requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; Adobe Animate (2D)<br>&#8226; Blender 3D<br>&#8226; LightWave 3D<br>]]>
+</visit>
+<pic>anime.png</pic>
+</excursion>
+</dataroot>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Computers of the Future</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="themes/COFT.min.css" />
+<link rel="stylesheet" href="themes/COFT.css" />
+
+<script src="COTF_ViewModel.js"></script>
+	
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div data-role="header" class="header">
+
+	<h1>Computers of<br>the Future</h1>
+<a href="#page3" class="ui-btn-right">About Us</a>
+</div>
+<div class="ui-content" role="main">
+  <div id="inventoryList" data-role="listview" data-filter="true"></div>
+  </div>
+<div data-role="footer" data-position="fixed" id="footer">
+	<h4>Inventory</h4>
+</div>
+</div>
+
+<div data-role="page" id="page1">
+<div data-role="header">
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content">
+<div id="thePic">Pic</div><br>
+<div id="textdis"><p>The <span id="theModel"> </span> computer, manufactured by <span id="theBrand"> </span> is only $<span id="theCost"> </span> at Computers of the Future! <span id="theDiscrip"></span> </p>
+	<p><b>Let's compair this computer with the latest MacBook Pro 2020!</b></p>
+</div>
+<div id="CompairPic"></div>
+
+</div>
+<a href="#page2" class="ui-btn">Calculate Payments</a>
+<div data-role="footer" data-position="fixed">
+<h4><span id="footerText"> </span></h4>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div data-role="header" >
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div class="ui-content" role="main">
+<div id="theSmallPic">Pic</div>
+	
+<div id="CacDis">Let's caculate the cost of this wonderful <b><span id="ModelCost"> </span> computer</b>!</div>
+	
+   <div class="ui-field-contain">
+      <label for="P">The <span id="CompName"> </span> costs:</label>
+      <input type="number" name="P" id="P" data-clear-btn="true"  placeholder="Very Expensive!">
+      </div>
+      <div class="ui-field-contain">
+      <label for="T">Sales Tax Rate:</label>
+      <input type="number" name="T" id="T" readonly >
+      </div>
+      <div class="ui-field-contain">
+      <label for="R">Annual Percentage Rate:</label>
+      <input type="number" name="R" id="R" readonly >
+      </div>
+      <div class="ui-field-contain">
+      <label for="N">Number of Monthly Payments:</label>
+      <input type="number" name="N" id="N" data-clear-btn="true">
+    </div>
+    <p>
+      <a href="#" class="ui-btn" id="calcButton">Calculate</a>
+     
+    </p>
+  <div id="Answer"></div>
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Payment Calculator</h4>
+</div>
+</div>
+	
+	
+<div data-role="page" id="page3">
+<div data-role="header" >
+<a href="#page" class="ui-btn  ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Computers of<br>the Future</h1>
+</div>
+<div id="wrapper">
+<h3>The COTF</h3>
+<p>Our company is located in Seattle. Our services include computer sales, after-sales maintenance, software installation, etc. We do our best to bring you the best service! </p>
+<h3>Payment Methods</h3>
+<p>We accept Affirm, PayPal, Visa®, MasterCard®, American Express and Diner&rsquo;s Club®. </p>
+<h3>Privacy</h3>
+<p>When processing credit card data, we follow the payment card industry data security standard (PCI DSS).Our server encrypts all information you submit so you can be sure that your credit card information will remain secure.</p>
+<h3>Return &amp; Refund</h3>
+<p>We accept returns within one month of purchase. Please make sure the item is in the original condition and returned to the original address. 
+<p>Once we received the item and made sure it is in good condition, we will generate a full refund to the payment method you used. Returns that do not meet the eligibility criteria may cause a refund delay or the product will be shipped back to you.</p>
+</p>
+<h3>Contact Us</h3>
+<p>Have a question? Please contact us by filling out the webform and we will get back to you as soon as possible!</p>
+<div id="webform">
+<p>
+  <label for="textfield">Your Name:</label>
+  <input type="text" name="textfield" id="textfield">
+</p>
+<p>
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email">
+</p>
+<p>
+  <label for="select">Subjects:</label>
+  <select name="select" id="select">
+    <option value="1">Select a subject</option>
+    <option value="2">Question on products</option>
+    <option value="3">Question after buying</option>
+	<option value="4">Others</option>
+  </select>
+</p>
+<p>
+  <label for="textarea">Message:</label>
+  <textarea name="textarea" id="textarea"></textarea>
+</p>
+<p>
+  <input type="submit" name="submit" id="submit" value="Submit">
+</p>
+	</div>
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>COTF</h4>
+</div>
+</div>
+	
+</body>
+
+</html>
+
+
+
+

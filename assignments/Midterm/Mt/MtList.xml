@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<standards>
+<interestRate>8.0</interestRate>
+<salesTax>0.09</salesTax>
+</standards>
+<computer>
+<ID>1</ID>
+<brand>4 days</brand>
+<cost>990.00</cost>
+<model>Beautiful Tuscany</model>
+<pic>tour1.jpg</pic>
+<term>6</term>
+<notes>Firenze, Pisa, and Milano</notes>
+</computer>
+<computer>
+<ID>2</ID>
+<brand>12 days</brand>
+<cost>2100.00</cost>
+<model>The Best of Italy</model>
+<pic>tour2.jpg</pic>
+<term>12</term>
+<notes>Roma, Venezia, and Milano</notes>
+</computer>
+<computer>
+<ID>3</ID>
+<brand>5 days</brand>
+<cost>1760.00</cost>
+<model>Historic Places</model>
+<pic>tour3.jpg</pic>
+<term>6</term>
+<notes>Pompeii, Roma, and Napoli</notes>
+</computer>
+<computer>
+<ID>4</ID>
+<brand>6 days</brand>
+<cost>1450.00</cost>
+<model>The Art Tour</model>
+<pic>tour4.jpg</pic>
+<term>18</term>
+<notes>Firenze, Venezia, and Roma</notes>
+</computer>
+<!--
+<computer>
+<ID>5</ID>
+<brand>KayPro</brand>
+<cost>4095.00</cost>
+<model>KayPro 20</model>
+<pic>KayPro10.jpg</pic>
+<term>18</term>
+<notes>The fabulous KayPro 20 is not easy to carry!</notes>
+</computer>
+-->
+</dataroot>

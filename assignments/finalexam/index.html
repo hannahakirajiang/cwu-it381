@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Apollo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+		</script>
+	<!-- Load the code necessary to migrate from an earlier version (optional) -->
+	<script src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+		integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM=" crossorigin="anonymous">
+		</script>
+	<!-- Load the code for the mobile extensions -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<!-- Load the base stylesheet for jquery mobile -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="apollo.js"></script>
+	</head>
+
+	<body>
+		
+		
+		
+<!--landing-->
+<div data-role="page" id="page">
+      <div data-role="header">
+    <h1>Apollo Lists</h1>
+    <div id="pic">
+		<img src="ApolloTitle.jpg" alt="Apollo" width="100%">
+		  </div>
+  </div>
+      <div role="main" class="ui-content">
+The Apollo missions had a single purpose. President John F. Kennedy set the goal in a speech
+to a joint session of Congress on May 25, 1961. "First, I believe that this nation should commit itself to achieving the goal, before this decade is out, of landing a man on the moon and returning him safely to the earth. No single space project in this period will be more impressive to mankind, or more important for the long-range exploration of space; and none will be so difficult or expensive to accomplish."
+          <hr><br>
+		<a href="#page1" class="ui-btn" id="calcButton">Explore Apollo!</a>
+        </div>
+
+<div data-role="footer" data-position="fixed">
+    <h4>Hannah Jiang</h4>
+  </div>
+    </div>
+		
+		
+<!--p1-->	
+<div data-role="page" id="page1">
+      <div data-role="header"> <a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+    <h1>Apollo List</h1>
+  </div>
+<div class="ui-content" role="main">
+<ul id="apolloList" data-role="listview"></ul>
+</div>
+<div data-role="footer" data-position="fixed">
+<h4>Hannah Jiang</h4>
+  </div>
+    </div>
+		
+		
+<!--p2-->		
+<div data-role="page" id="page2">
+      <div data-role="header"> <a href="#page1" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Back</a>
+    <h1>Manned Apollo Missions</h1>
+  </div>
+<div class="ui-content" role="main" align="center">  
+    <h1 id="flight"></h1>
+    <div id="crewPic"></div>
+    <p id="crew"></p>
+  </div>
+      <div data-role="footer" data-position="fixed">
+    <h4>Hannah Jiang</h4>
+  </div>
+    </div>
+		
+		
+		
+</body>
+</html>

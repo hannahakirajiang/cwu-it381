@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Content Creation/Management</tourName>
+<length>I will be creating your content with the tools and techniques I mentioned below. The length for this type of project is usually between 10 to 20 days depends on the specific requirements.</length>
+<price>Once you requested, you will get a confirmation email. Please provide your content information by directly replying to the email and I will schedule a call with you to furthermore discuss the content requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; Adobe Spark<br>&#8226; Google Drive Research Tool<br>&#8226; Blog Topic Generator<br> &#8226; Google Webmaster Tools<br>]]>
+</visit>
+<pic>content.png</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Host Update/Management</tourName>
+<length>I will be hosting your site with the tools and techniques I mentioned below. Usually, I can get it finish within a week.</length>
+<price>Once you requested, you will get a confirmation email. Please provide your current site information by directly replying to the email and I will schedule a call with you to furthermore discuss the host requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; Bluehost<br>&#8226; HostGator<br>&#8226; GoDaddy<br> &#8226; Hostinger<br>]]>
+</visit>
+<pic>host.png</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Site Update/Management</tourName>
+<length>I will be updating your site with the tools and techniques I mentioned below. If it is a small update, I can get it done within a day or two. If you would like to request a long-term update service, please let me know by replying to the confirmation email.</length>
+<price>Once you requested, you will get a confirmation email. Please provide your site information by directly replying the email and I will schedule a call with you to furthermore discuss the site update requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; WordPress<br>&#8226; Drupal<br>&#8226; Wix<br>&#8226; Webflow<br>]]>
+</visit>
+<pic>site.png</pic>
+</excursion>
+</dataroot>

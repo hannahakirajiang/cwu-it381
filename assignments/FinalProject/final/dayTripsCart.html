@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Excursions Cart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="themes/finalproject.css" />
+<link rel="stylesheet" href="themes/finalproject.min.css" />
+</head>
+<body>
+<div data-role="page" id="page">
+	<div data-role="header" data-position="fixed">
+    <h1>Your Project Chart</h1>
+    <div data-role="navbar">
+ <ul>
+ <ul>
+ <li><a href="dayTrips1.html" data-ajax="false">Development</a></li>
+ <li><a href="dayTrips2.html" data-ajax="false">Design</a></li>
+ <li><a href="dayTrips3.html" data-ajax="false">Management</a></li>
+ <li><a href="dayTripsCart.html" data-ajax="false" class="ui-btn-active ui-state-persist">My Projects</a></li>
+ </ul>
+ </ul>
+ </div>
+    </div>
+    
+    <div data-role="content">
+    <div id="tourName1"></div>
+    <div id="length1"></div>
+    <div id="price1"></div>
+    <div id="visit1"></div>
+    <div id="pic1"></div>
+    <br><hr><br>
+	<div id="tourName2"></div>
+    <div id="length2"></div>
+    <div id="price2"></div>
+    <div id="visit2"></div>
+    <div id="pic2"></div>
+    <br><hr><br>
+    <div id="tourName3"></div>
+    <div id="length3"></div>
+    <div id="price3"></div>
+    <div id="visit3"></div>
+    <div id="pic3"></div>
+    <br><hr><br>
+
+    </div>
+    <div>
+<input type="button" value="Clear Selections" OnClick="javascript:clearItems();">
+</div>
+
+   <div>
+<input type="button" value="Confirm Request" OnClick="alert('Thank you! You will recieve a confirmation email soon!')">
+</div>
+    
+  	<div data-role="footer" class="foot" data-position="fixed">
+    </div>
+</div>
+<script src="cart_ViewModel.js"></script>
+<script>
+	getMyTrips();
+	var d=new Date();
+	var d1 = d.getFullYear()
+	$(".foot").html("<h1>"+d1+" Akira Web Services&#8482;</h1>");
+</script>
+</body>
+</html>

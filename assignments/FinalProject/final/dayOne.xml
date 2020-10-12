@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<excursion>
+<ID>1</ID>
+<tourName>Code Your Site From Scratch</tourName>
+<length>I will be coding your site in Adobe Dreamweaver with the tools and techniques I mentioned below. The length for this type of project is usually between 15 to 30 days depends on the specific requirements.</length>
+<price>Once you requested, you will get an confirmation email. Please provide your site information by directly replying the email and I will scedule a call with you to futuremore discuss the site requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; HTML/CSS<br>&#8226; JavaScript<br>&#8226; Front-End Libraries<br>&#8226; PHP/MySQL<br>]]>
+</visit>
+<pic>dev.png</pic>
+</excursion>
+<excursion>
+<ID>2</ID>
+<tourName>Wordpress Devlopment</tourName>
+<length>I will be creating your site in WordPress with the tools and techniques I mentioned below. The length for this type of project is usually between 15 to 25 days depends on the specific requirements.</length>
+<price>Once you requested, you will get an confirmation email. Please provide your site information by directly replying the email and I will scedule a call with you to futuremore discuss the site requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; WordPress<br>&#8226; JavaScript<br>&#8226; PHP/MySQL<br>]]>
+</visit>
+<pic>wordpress.png</pic>
+</excursion>
+<excursion>
+<ID>3</ID>
+<tourName>Drupal Development</tourName>
+<length>I will be creating your site in Drupal 8 with the tools and techniques I mentioned below. The length for this type of project is usually between 15 to 25 days depends on the specific requirements.</length>
+<price>Once you requested, you will get an confirmation email. Please provide your site information by directly replying the email and I will scedule a call with you to futuremore discuss the site requirement and the price.</price>
+<visit><![CDATA[<br>&#8226; Drupal<br>&#8226; JavaScript<br>&#8226; PHP/MySQL<br>]]>
+</visit>
+<pic>drupal.png</pic>
+</excursion>
+</dataroot>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Seattle Day Tours</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<style type="text/css">
+#page div {
+}
+#footerrrs {
+    background-color: rgba(112,169,241,1.00);
+}
+body {
+}
+#FinalPrice {
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+#page {
+}
+.ui-content p img {
+    width: 470px;
+    height: auto;
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 3%;
+    margin-top: 2%;
+    text-align: center;
+}
+.ui-btn.ui-btn-right.ui-icon-arrow-r.ui-btn-icon-right {
+    margin-top: auto;
+}
+#headerrrs {
+    background-color: rgba(112,169,241,1.00);
+}
+h1 {
+    color: rgba(0,5,65,1.00);
+}
+h4 {
+    color: rgba(0,5,65,1.00);
+}
+</style>
+	
+<script type="text/javascript">
+	
+//Cost per person = value of meal + value of car + fixed price
+//total cost = (value of meal + value of car + fixed price)*number of people
+	
+	//global vars
+		var PeopleNumber = 1;
+		var CarPlan = 45;
+		var MealPlan = 45;
+		var FixedPrice = 50;
+		var TotalPrice = 0;
+		var AllPeoplePrice = 0;
+	
+$(document).on("pagecreate", function(){
+	$('#price').click(function(){
+		if (PeopleNumber == 1){
+			$('#perAnswer').text("$"+(FixedPrice + MealPlan + CarPlan) + " per person.");
+		}
+		else{
+			TotalPrice = FixedPrice + MealPlan + CarPlan;
+			$('#perAnswer').text("$"+ TotalPrice.toFixed(2) + " per person.");
+			AllPeoplePrice = (FixedPrice + MealPlan + CarPlan)*PeopleNumber;
+			$('#allAnswer').text("$"+ AllPeoplePrice.toFixed(2) +" for " + PeopleNumber + " people.");
+		}
+	});
+	
+
+//now read the change					  
+$('.radPpl').change(function(){
+	PeopleNumber=$('.radPpl:checked').val();
+	$('#pplSlider').val(PeopleNumber).slider('refresh'); 
+}) 
+
+$('.radMeal').change(function(){
+	MealPlan= parseInt($('.radMeal:checked').val());
+	//这里有问题，当我选择的时候一切就变成了string直接被写出来了
+})
+	
+$('.radCar').change(function(){
+	CarPlan= parseInt($('.radCar:checked').val());
+	//这里有问题，除了leave it as default, 无论我选择啥都会变成string
+})
+	
+$('#pplSlider').change(function(){
+	PeopleNumber=$('#pplSlider').val();
+	
+})	
+});
+			   
+
+</script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+<div id="headerrrs" data-role="header">
+	<h1>Seattle Day Tours</h1>
+</div>
+<div role="main" class="ui-content">
+	<ul data-role="listview">
+		<li data-role="list-divider">Morning</li>
+			<li><a href="#page1"><img src="images/sn.jpg" alt="SN">Space Needle<p class="des">The landmark of Seattle</p></a><a href="#page1"></a></li>
+			<li><a href="#page2"><img src="images/mpc.jpg" alt="MPC">Museum of Pop Culture<p class="des">Video games, sports, fashion</p></a><a href="#page2"></a></li>
+		<li data-role="list-divider">Afternoon</li>
+			<li><a href="#page3"><img src="images/pm.jpg" alt="Pike">Pike Place Market<p class="des">Oldest farmer's market in the US</p></a><a href="#page3"></a></li>	
+		<li data-role="list-divider">Evening</li>
+			<li><a href="#page4"><img src="images/dc.jpg" alt="DT">Downtown Seattle<p class="des">Gorgeous place to walk and shop</p></a><a href="#page4"></a></li>
+			</ul>
+	</div>
+<!-- convert button --> 
+	<a href="#page5" class="ui-btn ui-corner-all" id="caculator">Plan My Budget!</a> 
+		<div id="footerrrs" data-role="footer" data-position="fixed">
+	<h4>Made with ❤ by Hannah</h4>
+	</div>
+	</div>
+
+	<!-- travel pagrs --> 
+<div data-role="page" id="page1">
+<div id="headerrrs" data-role="header">
+<a href="#page" class=" ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Space Needle</h1>
+</div>
+<div class="ui-content">
+	<p><img src="images/snbig.jpg" alt="SN"></p>
+	<p>The space needle tower was designed for the 1962 World Expo in Seattle, and now it has become one of the symbols of Seattle. This great observation platform with a height of 520 feet from the ground provides a 360 degree panoramic view of Seattle. The city appearance, Mt. Rainier, Olympic National Park and pugetsound can be seen at a glance.</p>
+	
+</div>
+<div id="footerrrs" data-role="footer" data-position="fixed">
+<h4>Enjoy!</h4>
+<a href="#page2" class="ui-btn ui-btn-right ui-icon-arrow-r ui-btn-icon-right">Next</a>
+</div>
+</div>
+
+<div data-role="page" id="page2">
+<div id="headerrrs" data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	
+	<h1>Museum of Pop Culture</h1>
+</div>
+<div class="ui-content" role="main">
+	<p><img src="images/mpcbig.jpg" alt="mpc"></p>
+	<p>Museum of pop culture was founded in 2000 by Paul Allen, co-founder of Microsoft. It was called EMP Museum in the early days. It is dedicated to promoting pop music and changed its name in November 2016 to promote and display modern pop culture, such as video games, sports, fashion, etc</p>
+</div>
+<div id="footerrrs" data-role="footer" data-position="fixed">
+<h4>Enjoy!</h4>
+<a href="#page3" class="ui-btn ui-btn-right ui-icon-arrow-r ui-btn-icon-right">Next</a>
+</div>
+</div>
+
+<div data-role="page" id="page3">
+<div id="headerrrs" data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Pike Place Market</h1>
+</div>
+<div class="ui-content">
+	<p><img src="images/pmbig.jpg" alt="pm"></p>
+	<p>Pike place market, located in the center of Seattle, Washington, USA, is the oldest farmer's market in the United States. Park market is the most important tourist attraction in Seattle. The first Starbucks store is just across the street from this market.</p>
+</div>
+<div id="footerrrs" data-role="footer" data-position="fixed">
+<h4>Enjoy!</h4>
+<a href="#page4" class="ui-btn ui-btn-right ui-icon-arrow-r ui-btn-icon-right">Next</a>
+</div>
+</div>
+
+<div data-role="page" id="page4">
+<div id="headerrrs" data-role="header">
+<a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+	<h1>Downtown Seattle</h1>
+</div>
+<div class="ui-content" role="main">
+	<p><img src="images/dtbig.jpg" alt="dt"></p>
+	<p>Streets in downtown Seattle (near the Westlake station) are a very good place to walk and shop. Here you can see all kinds of people walking in this beautiful city, and it is especially pretty at night.</p>
+</div>
+<div id="footerrrs" data-role="footer" data-position="fixed">
+<h4>Enjoy!</h4>
+</div>
+</div>
+	
+<!-- planner page-->
+<div data-role="page" id="page5">
+  <div data-role="header" id="headerrrs">
+    <h1>Trip Cost Caculator</h1>
+	 <a href="#page" class="ui-btn ui-btn-left ui-icon-arrow-l ui-btn-icon-left">Home</a>
+  </div>
+  <div class="ui-content">
+    <div class="ui-field-contain">
+	<div id="fixedfees">Fixed Fees <a href="#leftPanelOverlay0">(Click for details)</a>:</legend> $50 per person</div>
+
+<!-- num of ppl --> 
+	  <div class="ui-field-contain">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>Number of people: (Pick one or use the slider.) </legend>
+        <input class="radPpl" type="radio" name="ppl" id="ppl1" value="1" checked />
+        <label for="ppl1">1</label>
+        <input class="radPpl" type="radio" name="ppl" id="ppl2" value="2" />
+        <label for="ppl2">2</label>
+        <input class="radPpl" type="radio" name="ppl" id="ppl3" value="3" />
+        <label for="ppl3">3</label>
+        <input class="radPpl" type="radio" name="ppl" id="ppl4" value="4" />
+        <label for="ppl4">4</label>
+        <input class="radPpl" type="radio" name="ppl" id="ppl5" value="5" />
+        <label for="ppl5">5</label>
+        <input class="radPpl" type="radio" name="ppl" id="ppl6" value="6" />
+        <label for="ppl6">6</label>
+      </fieldset>
+    </div>
+      <input type="range" name="pplSlider" id="pplSlider" value="1" min="1" max="20"/>
+    </div>
+	    
+<!-- meal plan --> 	 
+    <div class="ui-field-contain">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>Meal Plan Level <a href="#leftPanelOverlay">(Click for details)</a>:</legend>
+        <input class="radMeal" type="radio" name="meal" id="mealA" value="45"  checked/>
+        <label for="mealA">Normal</label>
+        <input class="radMeal" type="radio" name="meal" id="mealB" value="80" />
+        <label for="mealB">Advanced</label>
+        <input class="radMeal" type="radio" name="meal" id="mealC" value="120" />
+        <label for="mealC">Super</label>
+      </fieldset>
+    </div>
+
+<!-- ride plan --> 
+	   <div class="ui-field-contain">
+      <fieldset data-role="controlgroup" data-type="horizontal">
+        <legend>Ride Plan <a href="#leftPanelOverlay02">(Click for details)</a>:</legend>
+        <input class="radCar" type="radio" name="car"  id="carA" value="45"  checked/>
+        <label for="carA">Economic</label>
+        <input class="radCar" type="radio" name="car" id="carB" value="85" />
+        <label for="carB">Premium</label>
+        <input class="radCar" type="radio" name="car" id="carC" value="120" />
+        <label for="carC">Luxurious</label>
+      </fieldset>
+    </div>
+	  
+<!-- caculate button --> 	  
+    <a href="#page6" class="ui-btn ui-corner-all" id="price">Caculate the price!</a> </div>
+<!-- Final price page-->
+	<div id="FinalPrice">
+		<div id="perAnswer"></div>
+		<br>
+		<div id="allAnswer"></div>
+	</div>
+<!-- footer --> 
+  <div data-role="footer" id="footerrrs" data-position="fixed">
+    <h1>Enjoy!</h1>
+  </div>
+	
+	
+	<!--- overlay-->
+	<!--Left Panel Overlay 01-->
+  <div id="leftPanelOverlay0" data-role="panel"  data-display="overlay" data-position-fixed="true">
+    <div>
+		<strong>Fixed Fees: </strong><br>This $50 fixed price contail the tour guide fee and tips for all other services. 
+	 </div><br>
+    <a href="#page5" class="ui-btn" data-rel="close">Got it!</a> 
+	</div>
+	<!--End of Left Panel Overlay 0-->
+	
+		<!--Left Panel Overlay 01-->
+  <div id="leftPanelOverlay" data-role="panel"  data-display="overlay" data-position-fixed="true">
+    <div>
+		<p><strong>Normal: $45/person. </strong><br>Best fastfood in Seattle. (Dick's burger, Five Guys, Chick-fil-A, etc.) </p>
+		<p><strong>Advanced: $85/person.</strong><br>Best local food - Seattle's unique flavor. (Flintcreek Cattle, The Shambles, JuneBaby, etc. ) </p>
+		<p><strong>Super: $120/person.</strong><br> Best luxury restrant for a magnificence experience. (Spinasse, Canlis, Sushi Kashiba, etc. ) </p>
+	</div>
+    <a href="#page5" class="ui-btn" data-rel="close">Got it!</a> 
+	</div>
+	<!--End of Left Panel Overlay 1 -->
+	
+		<!--Left Panel Overlay 02-->
+  <div id="leftPanelOverlay02" data-role="panel"  data-display="overlay" data-position-fixed="true">
+    <div>
+	  	<p><strong>Economic: $45/person. </strong><br>Economic cars such as Toyota Camry, Toyota Prius, Honda Civic. </p>
+		<p><strong>Premium: $85/person.</strong><br>Premium business cars such as Mercedes Benz E-Class, Audi A6, Tesla Model S. </p>
+		<p><strong>Luxurious: $120/person.</strong><br>Best sports cars such as Porsche Panamera, Maserati GranTurismo, Lamborghini Gallardo. </p>
+	</div>
+    <a href="#page5" class="ui-btn" data-rel="close">Got it!</a> 
+	</div>
+	<!--End of Left Panel Overlay 2-->
+</div>
+	
+	
+</body>
+</html>

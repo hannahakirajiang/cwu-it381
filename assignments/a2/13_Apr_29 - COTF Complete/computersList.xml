@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot>
+<standards>
+<interestRate>8.0</interestRate>
+<salesTax>0.09</salesTax>
+</standards>
+<computer>
+<ID>1</ID>
+<brand>Atari</brand>
+<cost>549.95</cost>
+<model>Atari 400</model>
+<pic>Atari400.jpg</pic>
+<term>6</term>
+<notes>HD display, i11-8750H CPU, 40 GB RAM</notes>
+<discrip>This is the best computer for gaming! You can play any kinds of game with this Atari 400!</discrip>
+<CompairPic>Com400.png</CompairPic>
+</computer>
+<computer>
+<ID>2</ID>
+<brand>Atari</brand>
+<cost>999.95</cost>
+<model>Atari 800</model>
+<pic>Atari800.jpg</pic>
+<term>12</term>
+<notes>Ultra HD display, i11-8760H CPU, 60 GB RAM</notes>
+<discrip>This is the best laptop for work. This Atari 800 has 3 time speed than a MacBook Pro!</discrip>
+<CompairPic>Com800.png</CompairPic>
+</computer>
+<computer>
+<ID>3</ID>
+<brand>Commodore</brand>
+<cost>595.00</cost>
+<model>PET</model>
+<pic>commodorePET.jpg</pic>
+<term>6</term>
+<notes>Store your programs on cassette tapes!</notes>
+<discrip>This Commodore PET is the best 3D workstation among all! You can work your project at home without going to the lab!</discrip>
+<CompairPic>ComPET.png</CompairPic>
+</computer>
+<computer>
+<ID>4</ID>
+<brand>KayPro</brand>
+<cost>2795.00</cost>
+<model>KayPro 10</model>
+<pic>KayPro10.jpg</pic>
+<term>18</term>
+<notes>HD display, i15-100H CPU, 60 GB RAM</notes>
+<discrip>The fabulous KayPro is the best computer for data processing! </discrip>
+<CompairPic>ComKay.png</CompairPic>
+</computer>
+<computer>
+<ID>5</ID>
+<brand>KayPro</brand>
+<cost>4095.00</cost>
+<model>KayPro 20</model>
+<pic>KayPro10.jpg</pic>
+<term>18</term>
+<notes>Ultra HD display, i15-200H CPU, 80 GB RAM</notes>
+<discrip>The fabulous KayPro 20 is the best for data processing and video editing! </discrip>
+<CompairPic>ComKay.png</CompairPic>
+</computer>
+</dataroot>

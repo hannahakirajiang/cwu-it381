@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alaska Cruise Excursions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+</script> 	
+<!-- Load the code necessary to migrate from an earlier version (optional) --> 
+<script
+  src="https://code.jquery.com/jquery-migrate-3.1.0.js"
+  integrity="sha256-oA/lsZCgEPkbv/byAkeXSTEZTsGOPZCrtbyFBHmcGKM="
+  crossorigin="anonymous">
+</script> 
+<!-- Load the code for the mobile extensions --> 
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+<!-- Load the base stylesheet for jquery mobile -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="themes/finalproject.css" />
+<link rel="stylesheet" href="themes/finalproject.min.css" />
+<style type="text/css">
+#image p {
+    font-size: large;
+}
+</style>
+</head>
+
+<body>
+<div data-role="page" id="page">
+	<div data-role="header">
+    	<h1>Welcome to <br>Project Requestor</h1>
+    </div>
+    <div data-role="content">
+<div data-role="content" id="image" align="center">
+	<img src="media/project.png" width="100%">
+	<p>Welcome to Akira Web Service Inc! We are professinal web development team located in Seattle, WA.</p> 
+	<p>Request your website project today!</p>
+	<a href="dayTrips1.html" class="ui-btn" id="calcButton">Explore Our Services!</a> <br>
+	</div>
+		
+  	<div data-role="footer" class="foot" data-position="fixed">
+    </div>
+</div>
+	
+
+	
+</div>
+</body>
+<script>
+	var d=new Date();
+	var d1 = d.getFullYear()
+	$(".foot").html("<h1>"+d1+" Akira Web Service Inc&#8482;</h1>");
+	</script>
+</html>
